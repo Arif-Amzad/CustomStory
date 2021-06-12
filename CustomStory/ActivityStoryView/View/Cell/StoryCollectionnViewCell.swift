@@ -16,11 +16,10 @@ class StoryCollectionnViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
-        avatarImageView.layer.borderColor = UIColor.systemBlue.cgColor
-        avatarImageView.layer.borderWidth = 3
-        
-        storyImageView.layer.cornerRadius = 8
+        self.avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
+        self.avatarImageView.layer.borderColor = UIColor.systemBlue.cgColor
+        self.avatarImageView.layer.borderWidth = 3
+        self.storyImageView.layer.cornerRadius = 8
     }
 
 }

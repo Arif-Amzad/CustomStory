@@ -51,9 +51,12 @@ class ActivityStoryView: UIView {
     
     
     public var storyProperties = [StoryProperty]()
+    public var avatarBorderColor = UIColor.systemBlue
+    public var avatarBorderWidth = 3.0
+    public var showBlurEffectOnFullScreenView = true
     //public var delegate: ActivityStoryViewDelegate?
     
-    let storyFullScreenViewer = UIStoryboard(name: "StoryView", bundle: nil).instantiateViewController(identifier: "StoryFullScreenViewer") as! StoryFullScreenViewer
+    private let storyFullScreenViewer = UIStoryboard(name: "StoryView", bundle: nil).instantiateViewController(identifier: "StoryFullScreenViewer") as! StoryFullScreenViewer
     
     
     override init(frame: CGRect) {
@@ -96,12 +99,13 @@ class ActivityStoryView: UIView {
      }
     
     private func proceedToFullView(indexPath: IndexPath) {
-        let destinationVC = storyFullScreenViewer
+        let destinationVC = self.storyFullScreenViewer
 //        destinationVC.topTitleText = storyProperties[indexPath.item].title
 //        destinationVC.avatarImageSrc = storyProperties[indexPath.item].avatar
 //        destinationVC.storyImageSrc = storyProperties[indexPath.item].story
         destinationVC.storyProperties = storyProperties
         destinationVC.currentViewingStoryIndex = indexPath.item
+        destinationVC.showBlurEffectOnFullScreenView = self.showBlurEffectOnFullScreenView
         
         let currentController = getCurrentViewController()
         currentController?.present(destinationVC, animated: true, completion: nil)
@@ -119,11 +123,13 @@ extension ActivityStoryView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: storyCollectionnViewCellID, for: indexPath) as? StoryCollectionnViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.storyCollectionnViewCellID, for: indexPath) as? StoryCollectionnViewCell else {
             fatalError("can't dequeue StoryCollectionnViewCell")
         }
-        cell.avatarImageView.image = UIImage(named: storyProperties[indexPath.item].avatar)
-        cell.storyImageView.image = UIImage(named: storyProperties[indexPath.item].story[0].image)
+        cell.avatarImageView.image = UIImage(named: self.storyProperties[indexPath.item].avatar)
+        cell.storyImageView.image = UIImage(named: self.storyProperties[indexPath.item].story[0].image)
+        cell.avatarImageView.layer.borderColor = self.avatarBorderColor.cgColor
+        cell.avatarImageView.layer.borderWidth = CGFloat(self.avatarBorderWidth)
         
         return cell
     }

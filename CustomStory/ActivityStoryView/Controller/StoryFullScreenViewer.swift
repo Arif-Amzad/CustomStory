@@ -28,12 +28,12 @@ class StoryFullScreenViewer: UIViewController {
     
     @IBOutlet var nextButton: UIButton! {
         didSet {
-            nextButton.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+            self.nextButton.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
         }
     }
     @IBOutlet var prevButton: UIButton! {
         didSet {
-            prevButton.addTarget(self, action: #selector(prevAction), for: .touchUpInside)
+            self.prevButton.addTarget(self, action: #selector(prevAction), for: .touchUpInside)
         }
 
     }
@@ -44,16 +44,12 @@ class StoryFullScreenViewer: UIViewController {
 //    var storyImageSrc = ""
 //    var avatarImageSrc = ""
 //    var topTitleText = ""
-    var progressTimer = Timer()
-
-    var automaticDissappearAfterSeconds = 5.0
-    var timerProgressStartAt = 0.0
-    var progressRate = 0.0
-    
-    var topProgressViews = [UIProgressView]()
-
-
-    
+    private var progressTimer = Timer()
+    private var automaticDissappearAfterSeconds = 5.0
+    private var timerProgressStartAt = 0.0
+    private var progressRate = 0.0
+    private var topProgressViews = [UIProgressView]()
+    public var showBlurEffectOnFullScreenView = true
     private let pangestureVelocity:CGFloat = 1000
 
     override func viewDidLoad() {
@@ -91,7 +87,14 @@ class StoryFullScreenViewer: UIViewController {
 
     
     private func setupViewWillAppear() {
-        self.initBlurEffect()
+        
+        if showBlurEffectOnFullScreenView {
+            self.initBlurEffect()
+        }
+        else {
+            self.visualEffectViewHolder.alpha = 0.0
+        }
+        
         self.avatarImageView.transform = .init(scaleX: 0.50, y: 0.50)
         self.topTitleLabel.transform = .init(scaleX: 1, y: 0.85)
         
@@ -135,11 +138,7 @@ class StoryFullScreenViewer: UIViewController {
         
     }
     
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-    }
-    
+        
     
     private func initBlurEffect() {
         //self.visualEffectViewHolder.alpha = 1.0
@@ -363,12 +362,3 @@ class StoryFullScreenViewer: UIViewController {
 
 
 }
-
-
-//extension StoryFullScreenViewer: ActivityStoryViewDelegate {
-//    func tappedOnStoryAt(indexPath: IndexPath) {
-//        //let vc
-//    }
-//    
-//    
-//}

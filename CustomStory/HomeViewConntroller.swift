@@ -26,7 +26,15 @@ class HomeViewConntroller: UIViewController {
     
     
     private func setupViewDidLoad() {
-        loadStoryProperties()
+        
+        //Modify some appearance
+        self.storyView.avatarBorderColor = .systemBlue
+        self.storyView.avatarBorderWidth = 3.0
+        self.storyView.showBlurEffectOnFullScreenView = true
+        
+        
+        //fetch stories data from your sources(ex: Api call) and put them in "self.storyView.storyProperties" array
+        self.loadStoryProperties()
     }
     
     
