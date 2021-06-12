@@ -22,6 +22,9 @@ class StoryFullScreenViewer: UIViewController {
     @IBOutlet var rightIconImageView: UIImageView!
     @IBOutlet var progressViewHolder: UIView!
     @IBOutlet var countLabel: UILabel!
+    @IBOutlet var visualEffectView: UIVisualEffectView!
+    @IBOutlet var visualEffectViewHolder: UIView!
+
     
     @IBOutlet var nextButton: UIButton! {
         didSet {
@@ -48,6 +51,8 @@ class StoryFullScreenViewer: UIViewController {
     var progressRate = 0.0
     
     var topProgressViews = [UIProgressView]()
+
+
     
     private let pangestureVelocity:CGFloat = 1000
 
@@ -70,6 +75,7 @@ class StoryFullScreenViewer: UIViewController {
         self.progressTimer.invalidate()
         self.currentViewingStoryIndex = 0
         self.storyImageIndex = 0
+        self.visualEffectViewHolder.alpha = 1.0
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -80,12 +86,14 @@ class StoryFullScreenViewer: UIViewController {
     private func setupViewDidLoad() {
         self.avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
         self.progressRate = automaticDissappearAfterSeconds/1000
+        
     }
 
     
     private func setupViewWillAppear() {
+        self.initBlurEffect()
         self.avatarImageView.transform = .init(scaleX: 0.50, y: 0.50)
-        self.topTitleLabel.transform = .init(scaleX: 0.70, y: 0.70)
+        self.topTitleLabel.transform = .init(scaleX: 1, y: 0.85)
         
 
         self.topTitleLabel.text = self.storyProperties[currentViewingStoryIndex].title
@@ -118,7 +126,7 @@ class StoryFullScreenViewer: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             UIView.animate(withDuration: 0.5) {
                 self.avatarImageView.transform = .identity
-                self.topTitleLabel.transform = .identity
+                //self.topTitleLabel.transform = .identity
             }
         }
         
@@ -130,6 +138,17 @@ class StoryFullScreenViewer: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+    }
+    
+    
+    private func initBlurEffect() {
+        //self.visualEffectViewHolder.alpha = 1.0
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+            UIView.animate(withDuration: 0.4) {
+                self.visualEffectViewHolder.alpha = 0.0
+            }
+        }
+
     }
     
     private func initProgressViews() {
