@@ -52,27 +52,7 @@ class HomeViewConntroller: UIViewController {
             self.storyProperties.append(story)
         }
         self.storyView.storyProperties = self.storyProperties
-        self.storyView.delegate = self
     }
 
 
-}
-
-
-extension HomeViewConntroller: ActivityStoryViewDelegate {
-    func tappedOnStoryAt(indexPath: IndexPath, fullScreenViewController: StoryFullScreenViewer) {
-        
-//        let destinationVC = fullScreenViewController
-//        destinationVC.topTitleText = storyProperties[indexPath.item].title
-//        destinationVC.avatarImageSrc = storyProperties[indexPath.item].avatar
-//        destinationVC.storyImageSrc = storyProperties[indexPath.item].story
-//        
-//        
-//        
-//        present(destinationVC, animated: true, completion: nil)
-
-    }
-    
-    
-    
 }

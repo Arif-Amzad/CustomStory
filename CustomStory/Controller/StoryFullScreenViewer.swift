@@ -84,7 +84,7 @@ class StoryFullScreenViewer: UIViewController {
 
     
     private func setupViewWillAppear() {
-        self.avatarImageView.transform = .init(scaleX: 0.70, y: 0.70)
+        self.avatarImageView.transform = .init(scaleX: 0.50, y: 0.50)
         self.topTitleLabel.transform = .init(scaleX: 0.70, y: 0.70)
         
 
@@ -112,9 +112,14 @@ class StoryFullScreenViewer: UIViewController {
         self.timerProgressStartAt = 0.0
         
         UIView.animate(withDuration: 0.5) {
-            self.avatarImageView.transform = .identity
+            self.avatarImageView.transform = .init(scaleX: 1.25, y: 1.25)
             self.topTitleLabel.transform = .identity
-
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            UIView.animate(withDuration: 0.5) {
+                self.avatarImageView.transform = .identity
+                self.topTitleLabel.transform = .identity
+            }
         }
         
         self.initProgressViews()
@@ -272,7 +277,7 @@ class StoryFullScreenViewer: UIViewController {
     
     
     @objc func timerProgressAction() {
-        self.countLabel.text = "\(currentViewingStoryIndex+1)\n\(storyImageIndex+1)"
+        //self.countLabel.text = "\(currentViewingStoryIndex+1)\n\(storyImageIndex+1)"
         if timerProgressStartAt > 1.0 {
             //self.closeButtonAction()
             let imagesInCurrentStory = storyProperties[currentViewingStoryIndex].story

@@ -12,9 +12,9 @@ import UIKit
 
 
 
-protocol ActivityStoryViewDelegate {
-    func tappedOnStoryAt(indexPath: IndexPath, fullScreenViewController: StoryFullScreenViewer)
-}
+//protocol ActivityStoryViewDelegate {
+//    func tappedOnStoryAt(indexPath: IndexPath, fullScreenViewController: StoryFullScreenViewer)
+//}
 
 
 @IBDesignable
@@ -47,7 +47,7 @@ class ActivityStoryView: UIView {
     
     
     public var storyProperties = [StoryProperty]()
-    public var delegate: ActivityStoryViewDelegate?
+    //public var delegate: ActivityStoryViewDelegate?
     
     let storyFullScreenViewer = UIStoryboard(name: "StoryView", bundle: nil).instantiateViewController(identifier: "StoryFullScreenViewer") as! StoryFullScreenViewer
     
