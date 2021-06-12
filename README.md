@@ -1,6 +1,6 @@
 # CustomStory
 
-A customable Story view like Facebook.
+A customable Story view like Facebook or other Social apps.
 
 To apply this feature on your project...
 1. Download and copy "ActivityStoryView" folder to your project.
