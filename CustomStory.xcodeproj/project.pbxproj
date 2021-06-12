@@ -20,6 +20,7 @@
 		DD4797CC2673C29A00DA4F3B /* HomeViewConntroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4797CB2673C29A00DA4F3B /* HomeViewConntroller.swift */; };
 		DD4797D62673D19100DA4F3B /* StoryFullScreenViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4797D42673D19100DA4F3B /* StoryFullScreenViewer.swift */; };
 		DD4797DB2673D2FC00DA4F3B /* StoryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD4797DA2673D2FC00DA4F3B /* StoryView.storyboard */; };
+		DDDB94CC2675075E00A108B8 /* Stories.json in Resources */ = {isa = PBXBuildFile; fileRef = DDDB94CB2675075E00A108B8 /* Stories.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DD4797CB2673C29A00DA4F3B /* HomeViewConntroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewConntroller.swift; sourceTree = "<group>"; };
 		DD4797D42673D19100DA4F3B /* StoryFullScreenViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryFullScreenViewer.swift; sourceTree = "<group>"; };
 		DD4797DA2673D2FC00DA4F3B /* StoryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryView.storyboard; sourceTree = "<group>"; };
+		DDDB94CB2675075E00A108B8 /* Stories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stories.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +72,10 @@
 		DD47979926739F2C00DA4F3B /* CustomStory */ = {
 			isa = PBXGroup;
 			children = (
-				DD4797BD2673A34B00DA4F3B /* Storyboards */,
-				DD4797B326739F4100DA4F3B /* View */,
-				DD4797B226739F3B00DA4F3B /* Controller */,
+				DDDB94C8267500B200A108B8 /* Resources */,
+				DD5C5F1B2674F239006F16C0 /* ActivityStoryView */,
 				DD47979A26739F2C00DA4F3B /* AppDelegate.swift */,
+				DD4797CB2673C29A00DA4F3B /* HomeViewConntroller.swift */,
 				DD47979C26739F2C00DA4F3B /* SceneDelegate.swift */,
 				DD4797A626739F2F00DA4F3B /* Assets.xcassets */,
 				DD4797A026739F2C00DA4F3B /* Main.storyboard */,
@@ -87,7 +89,6 @@
 		DD4797B226739F3B00DA4F3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DD4797CB2673C29A00DA4F3B /* HomeViewConntroller.swift */,
 				DD4797D42673D19100DA4F3B /* StoryFullScreenViewer.swift */,
 			);
 			path = Controller;
@@ -118,6 +119,24 @@
 				DD4797C12673A3E100DA4F3B /* StoryCollectionnViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		DD5C5F1B2674F239006F16C0 /* ActivityStoryView */ = {
+			isa = PBXGroup;
+			children = (
+				DD4797BD2673A34B00DA4F3B /* Storyboards */,
+				DD4797B326739F4100DA4F3B /* View */,
+				DD4797B226739F3B00DA4F3B /* Controller */,
+			);
+			path = ActivityStoryView;
+			sourceTree = "<group>";
+		};
+		DDDB94C8267500B200A108B8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDDB94CB2675075E00A108B8 /* Stories.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +200,7 @@
 				DD4797A726739F2F00DA4F3B /* Assets.xcassets in Resources */,
 				DD4797BA26739FC800DA4F3B /* ActivityStoryView.xib in Resources */,
 				DD4797DB2673D2FC00DA4F3B /* StoryView.storyboard in Resources */,
+				DDDB94CC2675075E00A108B8 /* Stories.json in Resources */,
 				DD4797C32673A3E100DA4F3B /* StoryCollectionnViewCell.xib in Resources */,
 				DD4797A226739F2C00DA4F3B /* Main.storyboard in Resources */,
 			);

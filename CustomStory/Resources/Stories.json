@@ -1,0 +1,116 @@
+{
+  "stories" : [
+    {
+      "title" : "Arif Amzad",
+      "avatar" : "a1",
+      "story" : [
+          {
+              "image": "s1"
+          }
+      ]
+    },
+    {
+        "title" : "Farhin Islam",
+        "avatar" : "a2",
+        "story" : [
+            {
+                "image": "s2"
+            },
+            {
+                "image": "s3"
+            }
+        ]
+    },
+    {
+        "title" : "Sharmin Akter",
+        "avatar" : "a3",
+        "story" : [
+            {
+                "image": "s4"
+            },
+            {
+                "image": "s5"
+            },
+            {
+                "image": "s6"
+            }
+        ]
+    },
+    {
+        "title" : "Nahid Shishir",
+        "avatar" : "a4",
+        "story" : [
+            {
+                "image": "s7"
+            },
+            {
+                "image": "s1"
+            }
+
+        ]
+    },
+    {
+        "title" : "Siam Hossain",
+        "avatar" : "a5",
+        "story" : [
+            {
+                "image": "s2"
+            },
+            {
+                "image": "s3"
+            }
+        ]
+    },
+    {
+        "title" : "Aisha Rahman",
+        "avatar" : "a6",
+        "story" : [
+            {
+                "image": "s4"
+            }
+        ]
+    },
+    {
+        "title" : "Iftekhar Sanjid",
+        "avatar" : "a7",
+        "story" : [
+            {
+                "image": "s5"
+            },
+            {
+                "image": "s6"
+            }
+        ]
+    },
+    {
+        "title" : "Arif Amzad",
+        "avatar" : "a1",
+        "story" : [
+            {
+                "image": "s7"
+            }
+        ]
+    },
+    {
+        "title" : "Farhin Islam",
+        "avatar" : "a2",
+        "story" : [
+            {
+                "image": "s1"
+            },
+            {
+                "image": "s2"
+            }
+        ]
+    },
+    {
+        "title" : "Sharmin Akter",
+        "avatar" : "a3",
+        "story" : [
+            {
+                "image": "s3"
+            }
+        ]
+    }
+  ]
+}

@@ -31,13 +31,17 @@ class ActivityStoryView: UIView {
     }
     */
     
-    struct StoryProperty {
+    struct Stories: Codable {
+        let stories: [StoryProperty]
+    }
+    
+    struct StoryProperty: Codable {
         let title: String
         let avatar: String
         let story: [Story]
     }
 
-    struct Story {
+    struct Story: Codable {
         let image: String
     }
     
