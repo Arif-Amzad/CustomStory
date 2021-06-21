@@ -38,7 +38,7 @@ class StoryFullScreenViewer: UIViewController {
 
     }
     
-    public var storyProperties = [ActivityStoryView.StoryProperty]()
+    public var storyProperties = [StoryProperty]()
     public var currentViewingStoryIndex = 0
     private var storyImageIndex = 0
 //    var storyImageSrc = ""
@@ -185,7 +185,7 @@ class StoryFullScreenViewer: UIViewController {
     
     private func updateStoryImages(index: Int) {
         let storiyImages = self.storyProperties[currentViewingStoryIndex].story
-        self.storyImageView.image = UIImage(named: storiyImages[index].image)
+        self.storyImageView.image = UIImage(named: (storiyImages[index].image))
     }
     
     
