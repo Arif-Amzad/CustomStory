@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class StoryFullScreenViewer: UIViewController {
@@ -101,9 +102,17 @@ class StoryFullScreenViewer: UIViewController {
 
         self.topTitleLabel.text = self.storyProperties[currentViewingStoryIndex].title
         
-        let storiyImages = self.storyProperties[currentViewingStoryIndex].story
-        self.storyImageView.image = UIImage(named: storiyImages[0].image)
-        self.avatarImageView.image = UIImage(named: self.storyProperties[currentViewingStoryIndex].avatar)
+        let storyImages = self.storyProperties[currentViewingStoryIndex].story
+        let singleStoryImage = storyImages[0].image
+        self.storyImageView.kf.indicatorType = .activity
+        self.storyImageView.kf.setImage(with: URL(string: singleStoryImage), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+            
+        }
+        let avatarImageLink = self.storyProperties[currentViewingStoryIndex].avatar
+        self.avatarImageView.kf.indicatorType = .activity
+        self.avatarImageView.kf.setImage(with: URL(string: avatarImageLink), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+            
+        }
         
         
         
@@ -185,7 +194,10 @@ class StoryFullScreenViewer: UIViewController {
     
     private func updateStoryImages(index: Int) {
         let storiyImages = self.storyProperties[currentViewingStoryIndex].story
-        self.storyImageView.image = UIImage(named: (storiyImages[index].image))
+        let storyImageLink = storiyImages[index].image
+        self.storyImageView.kf.setImage(with: URL(string: storyImageLink), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+            
+        }
     }
     
     

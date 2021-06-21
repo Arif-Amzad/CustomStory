@@ -112,17 +112,19 @@ extension ActivityStoryView: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.storyCollectionnViewCellID, for: indexPath) as? StoryCollectionnViewCell else {
             fatalError("can't dequeue StoryCollectionnViewCell")
         }
-//        let avatarImageName = self.storyProperties[indexPath.item].avatar
-//        let storyImageName = self.storyProperties[indexPath.item].story[0].image
-//        cell.avatarImageView.kf.indicatorType = .activity
-//        cell.avatarImageView.kf.setImage(with: URL(string: avatarImageName), placeholder: nil , options: nil) { (_) in
-//
-//        }
-//        cell.storyImageView.kf.indicatorType = .activity
-//        cell.storyImageView.kf.setImage(with: URL(string: storyImageName), placeholder: nil , options: nil) { (_) in
-//        }
-        cell.avatarImageView.image = UIImage(named: self.storyProperties[indexPath.item].avatar)
-        cell.storyImageView.image = UIImage(named: self.storyProperties[indexPath.item].story[0].image)
+        let avatarImageName = self.storyProperties[indexPath.item].avatar
+        print(avatarImageName)
+        let storyImageName = self.storyProperties[indexPath.item].story[0].image
+        print(storyImageName)
+        cell.avatarImageView.kf.indicatorType = .activity
+        cell.avatarImageView.kf.setImage(with: URL(string: avatarImageName), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+
+        }
+       cell.storyImageView.kf.indicatorType = .activity
+       cell.storyImageView.kf.setImage(with: URL(string: storyImageName), placeholder: UIImage(named: "s1" ) , options: nil) { (_) in
+        }
+       // cell.avatarImageView.image = UIImage(named: self.storyProperties[indexPath.item].avatar)
+       //cell.storyImageView.image = UIImage(named: self.storyProperties[indexPath.item].story[0].image)
         cell.avatarImageView.layer.borderColor = self.avatarBorderColor.cgColor
         cell.avatarImageView.layer.borderWidth = CGFloat(self.avatarBorderWidth)
         

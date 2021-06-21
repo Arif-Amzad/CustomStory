@@ -28,7 +28,10 @@ class HomeViewConntroller: UIViewController {
         self.setupViewDidLoad()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchStories()
+    }
     private func setupViewDidLoad() {
         
         //Modify some appearance
@@ -38,8 +41,10 @@ class HomeViewConntroller: UIViewController {
         
         
         //fetch stories data from your sources(ex: Api call) and put them in "self.storyView.storyProperties" array
-        self.loadStoryProperties()
+       // self.loadStoryProperties()
         fetchStories()
+        //self.loadStoryProperties()
+       //
     }
     
     
@@ -97,15 +102,20 @@ class HomeViewConntroller: UIViewController {
                             
                            // print(storyProperty)
                         }
-                        let storyProperty = StoryProperty(last_updated: lastUpdate, title: userName, avatar: avatar, story: storyArray)
+                        let storyProperty = StoryProperty( title: userName, avatar: avatar, story: storyArray)
+                        storyProperties.append(storyProperty)
                         storyProperties.append(storyProperty)
                         
                     }
+                    print("stories property")
+                    print(storyProperties.debugDescription, "\n" , storyProperties.count)
                     
-                    print(storyProperties.debugDescription)
+                    self.storyView.storyProperties = storyProperties
+                    self.storyView.collectionView.reloadData()
+                   print(self.storyView.storyProperties.count)
                     print(error)
                 }
-                    self.storyView.storyProperties = storyProperties
+                    
             }
         }
         }
