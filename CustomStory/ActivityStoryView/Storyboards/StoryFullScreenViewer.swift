@@ -25,6 +25,8 @@ class StoryFullScreenViewer: UIViewController {
     @IBOutlet var countLabel: UILabel!
     @IBOutlet var visualEffectView: UIVisualEffectView!
     @IBOutlet var visualEffectViewHolder: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
+    
 
     
     @IBOutlet var nextButton: UIButton! {
@@ -73,6 +75,29 @@ class StoryFullScreenViewer: UIViewController {
         self.currentViewingStoryIndex = 0
         self.storyImageIndex = 0
         self.visualEffectViewHolder.alpha = 1.0
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+           swipeRight.direction = .right
+           self.view.addGestureRecognizer(swipeRight)
+
+           let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
+        swipeLeft.direction = .left
+           self.view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @IBAction func respondToSwipeGesture(_ gestureRecognizer : UISwipeGestureRecognizer) {
+        if gestureRecognizer.state == .ended {
+            // Perform action.
+            switch gestureRecognizer.direction {
+            case .left:
+            print("swiped left")
+            case .right:
+            print("swiped right")
+            default:
+                break
+            }
+            
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -105,14 +130,15 @@ class StoryFullScreenViewer: UIViewController {
         let storyImages = self.storyProperties[currentViewingStoryIndex].story
         let singleStoryImage = storyImages[0].image
         self.storyImageView.kf.indicatorType = .activity
-        self.storyImageView.kf.setImage(with: URL(string: singleStoryImage), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+        self.storyImageView.kf.setImage(with: URL(string: singleStoryImage), placeholder: nil , options: nil) { (_) in
             
         }
         let avatarImageLink = self.storyProperties[currentViewingStoryIndex].avatar
         self.avatarImageView.kf.indicatorType = .activity
-        self.avatarImageView.kf.setImage(with: URL(string: avatarImageLink), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+        self.avatarImageView.kf.setImage(with: URL(string: avatarImageLink), placeholder:  nil , options: nil) { (_) in
             
         }
+        self.timeLabel.text = self.storyProperties[currentViewingStoryIndex].last_updated
         
         
         
@@ -195,7 +221,7 @@ class StoryFullScreenViewer: UIViewController {
     private func updateStoryImages(index: Int) {
         let storiyImages = self.storyProperties[currentViewingStoryIndex].story
         let storyImageLink = storiyImages[index].image
-        self.storyImageView.kf.setImage(with: URL(string: storyImageLink), placeholder:  UIImage(named: "a1" ) , options: nil) { (_) in
+        self.storyImageView.kf.setImage(with: URL(string: storyImageLink), placeholder:  nil , options: nil) { (_) in
             
         }
     }

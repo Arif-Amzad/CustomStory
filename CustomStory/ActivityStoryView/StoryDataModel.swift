@@ -12,7 +12,7 @@ struct Stories: Codable {
 }
 
 struct StoryProperty: Codable {
-   // var last_updated: String
+    var last_updated: String
     var title: String
     var avatar: String
     var story: [Story]

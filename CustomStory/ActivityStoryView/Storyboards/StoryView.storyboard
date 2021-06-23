@@ -111,16 +111,16 @@
                                     <constraint firstAttribute="height" constant="200" id="mzJ-0A-f3j"/>
                                 </constraints>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="t50-uN-19S">
-                                <rect key="frame" x="20" y="437.5" width="25" height="21.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t50-uN-19S">
+                                <rect key="frame" x="20" y="435.5" width="25" height="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="4iN-1e-ERU"/>
                                     <constraint firstAttribute="width" secondItem="t50-uN-19S" secondAttribute="height" multiplier="1:1" id="YQJ-VH-sGB"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-MK-YIV">
-                                <rect key="frame" x="369" y="437.5" width="25" height="21.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-MK-YIV">
+                                <rect key="frame" x="369" y="435.5" width="25" height="25"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="7Oe-0u-OtQ"/>
@@ -186,6 +186,7 @@
                         <outlet property="progressViewHolder" destination="hyN-Gi-iuz" id="ehp-YB-BRB"/>
                         <outlet property="rightIconImageView" destination="XnZ-MK-YIV" id="LWd-5f-FYG"/>
                         <outlet property="storyImageView" destination="cBl-9T-Moq" id="4sU-4l-Uvf"/>
+                        <outlet property="timeLabel" destination="5fL-ck-Gex" id="UAk-hs-Ajk"/>
                         <outlet property="topTitleLabel" destination="0S4-N9-zca" id="XnZ-wM-c66"/>
                         <outlet property="visualEffectView" destination="ESb-hw-jCZ" id="aFO-sL-eFu"/>
                         <outlet property="visualEffectViewHolder" destination="oa5-GW-8i2" id="bhm-QE-Ieg"/>
@@ -197,8 +198,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

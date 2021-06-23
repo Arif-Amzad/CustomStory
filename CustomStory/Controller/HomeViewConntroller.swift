@@ -81,7 +81,7 @@ class HomeViewConntroller: UIViewController {
                 
                 if success {
                     storyProperties.removeAll()
-                if let stories = stories {
+                    if let stories = stories, stories.count > 0 {
                     print(stories.stories[0].user.name)
                     self.stories = stories
                     let totalStories = stories.stories
@@ -102,7 +102,7 @@ class HomeViewConntroller: UIViewController {
                             
                            // print(storyProperty)
                         }
-                        let storyProperty = StoryProperty( title: userName, avatar: avatar, story: storyArray)
+                        let storyProperty = StoryProperty(last_updated: lastUpdate, title: userName, avatar: avatar, story: storyArray)
                         storyProperties.append(storyProperty)
                         storyProperties.append(storyProperty)
                         
