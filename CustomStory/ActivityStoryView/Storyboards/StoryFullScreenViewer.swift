@@ -113,7 +113,9 @@ class StoryFullScreenViewer: UIViewController {
     
     
     private func setupViewDidLoad() {
-        self.avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
+        self.avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width * 0.15
+        self.storyImageView.layer.cornerRadius = 20.0
+        self.storyImageView.backgroundColor = .black
         self.progressRate = automaticDissappearAfterSeconds/1000
         
     }

@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		29A9B738D42591CCF7D07365 /* Pods_CustomStory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D333AE92A260E26389BD5F2 /* Pods_CustomStory.framework */; };
+		3EABE95326856BBB004DBE8E /* Lobster 1.4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE94926856BBB004DBE8E /* Lobster 1.4.otf */; };
+		3EABE95426856BBB004DBE8E /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE94A26856BBB004DBE8E /* Lobster-Regular.ttf */; };
+		3EABE95526856BBB004DBE8E /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE94B26856BBB004DBE8E /* Roboto-Medium.ttf */; };
+		3EABE95626856BBB004DBE8E /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE94C26856BBB004DBE8E /* Roboto-Regular.ttf */; };
+		3EABE95726856BBB004DBE8E /* Uni Sans Heavy Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE94E26856BBB004DBE8E /* Uni Sans Heavy Italic.otf */; };
+		3EABE95826856BBB004DBE8E /* Uni Sans Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE94F26856BBB004DBE8E /* Uni Sans Heavy.otf */; };
+		3EABE95926856BBB004DBE8E /* Uni Sans Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE95026856BBB004DBE8E /* Uni Sans Regular.otf */; };
+		3EABE95A26856BBB004DBE8E /* Uni Sans Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE95126856BBB004DBE8E /* Uni Sans Thin Italic.otf */; };
+		3EABE95B26856BBB004DBE8E /* Uni Sans Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3EABE95226856BBB004DBE8E /* Uni Sans Thin.otf */; };
 		3EB0E90C26806EB700461EBC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB0E90B26806EB700461EBC /* Api.swift */; };
 		3EB0E90E26806FFF00461EBC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0E90D26806FFF00461EBC /* Alamofire.framework */; };
 		3EB0E9122680700200461EBC /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0E9112680700200461EBC /* ObjectMapper.framework */; };
@@ -37,6 +46,15 @@
 
 /* Begin PBXFileReference section */
 		241C90F00D5985E0130653F5 /* Pods-CustomStory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomStory.debug.xcconfig"; path = "Target Support Files/Pods-CustomStory/Pods-CustomStory.debug.xcconfig"; sourceTree = "<group>"; };
+		3EABE94926856BBB004DBE8E /* Lobster 1.4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster 1.4.otf"; sourceTree = "<group>"; };
+		3EABE94A26856BBB004DBE8E /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		3EABE94B26856BBB004DBE8E /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		3EABE94C26856BBB004DBE8E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		3EABE94E26856BBB004DBE8E /* Uni Sans Heavy Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uni Sans Heavy Italic.otf"; sourceTree = "<group>"; };
+		3EABE94F26856BBB004DBE8E /* Uni Sans Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uni Sans Heavy.otf"; sourceTree = "<group>"; };
+		3EABE95026856BBB004DBE8E /* Uni Sans Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uni Sans Regular.otf"; sourceTree = "<group>"; };
+		3EABE95126856BBB004DBE8E /* Uni Sans Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uni Sans Thin Italic.otf"; sourceTree = "<group>"; };
+		3EABE95226856BBB004DBE8E /* Uni Sans Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Uni Sans Thin.otf"; sourceTree = "<group>"; };
 		3EB0E90B26806EB700461EBC /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		3EB0E90D26806FFF00461EBC /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB0E9112680700200461EBC /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +108,30 @@
 				7803B1D3E702845DA0A25123 /* Pods-CustomStory.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3EABE94826856BBB004DBE8E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3EABE94926856BBB004DBE8E /* Lobster 1.4.otf */,
+				3EABE94A26856BBB004DBE8E /* Lobster-Regular.ttf */,
+				3EABE94B26856BBB004DBE8E /* Roboto-Medium.ttf */,
+				3EABE94C26856BBB004DBE8E /* Roboto-Regular.ttf */,
+				3EABE94D26856BBB004DBE8E /* Uni-Sans */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3EABE94D26856BBB004DBE8E /* Uni-Sans */ = {
+			isa = PBXGroup;
+			children = (
+				3EABE94E26856BBB004DBE8E /* Uni Sans Heavy Italic.otf */,
+				3EABE94F26856BBB004DBE8E /* Uni Sans Heavy.otf */,
+				3EABE95026856BBB004DBE8E /* Uni Sans Regular.otf */,
+				3EABE95126856BBB004DBE8E /* Uni Sans Thin Italic.otf */,
+				3EABE95226856BBB004DBE8E /* Uni Sans Thin.otf */,
+			);
+			path = "Uni-Sans";
 			sourceTree = "<group>";
 		};
 		3EB0E9152680752700461EBC /* Models */ = {
@@ -201,6 +243,7 @@
 		DDDB94C8267500B200A108B8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3EABE94826856BBB004DBE8E /* Fonts */,
 				3EB0E9152680752700461EBC /* Models */,
 				DDDB94CB2675075E00A108B8 /* Stories.json */,
 				3EB0E90B26806EB700461EBC /* Api.swift */,
@@ -267,12 +310,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EABE95526856BBB004DBE8E /* Roboto-Medium.ttf in Resources */,
+				3EABE95626856BBB004DBE8E /* Roboto-Regular.ttf in Resources */,
 				DD4797AA26739F2F00DA4F3B /* LaunchScreen.storyboard in Resources */,
 				DD4797A726739F2F00DA4F3B /* Assets.xcassets in Resources */,
+				3EABE95726856BBB004DBE8E /* Uni Sans Heavy Italic.otf in Resources */,
 				DD4797BA26739FC800DA4F3B /* ActivityStoryView.xib in Resources */,
 				DD4797DB2673D2FC00DA4F3B /* StoryView.storyboard in Resources */,
+				3EABE95326856BBB004DBE8E /* Lobster 1.4.otf in Resources */,
+				3EABE95826856BBB004DBE8E /* Uni Sans Heavy.otf in Resources */,
 				DDDB94CC2675075E00A108B8 /* Stories.json in Resources */,
 				DD4797C32673A3E100DA4F3B /* StoryCollectionnViewCell.xib in Resources */,
+				3EABE95A26856BBB004DBE8E /* Uni Sans Thin Italic.otf in Resources */,
+				3EABE95B26856BBB004DBE8E /* Uni Sans Thin.otf in Resources */,
+				3EABE95426856BBB004DBE8E /* Lobster-Regular.ttf in Resources */,
+				3EABE95926856BBB004DBE8E /* Uni Sans Regular.otf in Resources */,
 				DD4797A226739F2C00DA4F3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
