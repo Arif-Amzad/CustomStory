@@ -91,6 +91,13 @@ class StoryFullScreenViewer: UIViewController {
             switch gestureRecognizer.direction {
             case .left:
             print("swiped left")
+                self.storyImageIndex = 0
+                self.timerProgressStartAt = 0.0
+                currentViewingStoryIndex += 1
+                
+                UIView.animate(withDuration: 0.2) {
+                    self.setupViewWillAppear()
+                }
             case .right:
             print("swiped right")
             default:
